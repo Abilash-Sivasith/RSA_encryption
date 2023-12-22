@@ -29,3 +29,9 @@ for num in list_of_nums_to_check:
 #print(list_of_primes_less_than_100) # should return a list of 25 nums
 #print(len(list_of_primes_less_than_100)) # should return 25
     
+# function to create; 
+#   - Euler Toilent Function
+#   - Public 'e' function
+#   - gcd finder
+#   - private key finder
+#   - Encryption and Decryption function
