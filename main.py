@@ -29,8 +29,14 @@ for num in list_of_nums_to_check:
 #print(list_of_primes_less_than_100) # should return a list of 25 nums
 #print(len(list_of_primes_less_than_100)) # should return 25
     
+def eulers_toilent_calculator(p, q):
+    '''finds eulers toilent'''
+    eulers_tiolnet = (p - 1) * (q - 1)
+    return eulers_tiolnet
+
+# print(eulers_toilent_calculator(5, 7)) # will print 24
+
 # function to create; 
-#   - Euler Toilent Function
 #   - Public 'e' function
 #   - gcd finder
 #   - private key finder
