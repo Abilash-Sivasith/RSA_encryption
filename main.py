@@ -34,10 +34,26 @@ def eulers_toilent_calculator(p, q):
     eulers_tiolnet = (p - 1) * (q - 1)
     return eulers_tiolnet
 
+# TESTING - eulers_toilent_calculator function
 # print(eulers_toilent_calculator(5, 7)) # will print 24
 
-# function to create; 
-#   - Public 'e' function
-#   - gcd finder
-#   - private key finder
-#   - Encryption and Decryption function
+def public_e_finder():
+    '''find the publically used 'e' needed for encrypted messages to be sent'''
+    pass
+
+def gcd_finder(a, b):
+    '''finds the greatest common divisors and returns True is gcd(a,b) = 1'''
+    pass
+
+def private_d_finder():
+    '''find the private key 'd' were d = e^-1 mod(phi(n))'''
+    pass
+
+def RSA_encryption():
+    '''encrpyts provided plain text and encrpyts text with the RSA system'''
+    pass
+
+def RSA_decryption():
+    '''decrypts given cipher text that has been encrypted using the RSA system'''
+    pass
+
