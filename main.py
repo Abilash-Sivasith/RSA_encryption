@@ -42,8 +42,14 @@ def public_e_finder():
     pass
 
 def gcd_finder(a, b):
-    '''finds the greatest common divisors and returns True is gcd(a,b) = 1'''
-    pass
+    '''finds the greatest common divisors'''
+    if a == 0 :
+        return b
+    elif b == 0:
+        return a
+    else:
+        gcd = gcd_finder(b % a , a)
+        return gcd
 
 def private_d_finder():
     '''find the private key 'd' were d = e^-1 mod(phi(n))'''
