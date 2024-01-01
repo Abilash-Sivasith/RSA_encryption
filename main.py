@@ -1,6 +1,7 @@
 """Implement RSA encrpytion to encrypt the privided plain-text"""
 
 import math
+import random
 
 def prime_checker(number):
     '''returns true if the number passed through is a prime'''
@@ -37,9 +38,15 @@ def eulers_toilent_calculator(p, q):
 # TESTING - eulers_toilent_calculator function
 # print(eulers_toilent_calculator(5, 7)) # will print 24
 
-def public_e_finder():
+def public_e_finder(a, p, q):
     '''find the publically used 'e' needed for encrypted messages to be sent'''
-    pass
+    e_to_test = random.randrange(2, 1000000000000000)
+    gcd_of_e_and_euler_toilent = is_gcd_equal_to_one(a, eulers_toilent_calculator(p ,q))
+    if gcd_of_e_and_euler_toilent is True:
+        return e_to_test
+    else:
+        public_e_finder(a, p, q)
+
 
 def gcd_finder(a, b):
     '''finds the greatest common divisors'''
@@ -51,10 +58,9 @@ def gcd_finder(a, b):
         gcd = gcd_finder(b % a , a)
         return gcd
     
-def is_gcd_equal_to_one(a, p, q):
+def is_gcd_equal_to_one(a, b):
     '''return true if gcd == 1'''
-    n = p * q
-    gcd = gcd_finder(a, n)
+    gcd = gcd_finder(a, b)
     if gcd == 1:
         return True
     return False
