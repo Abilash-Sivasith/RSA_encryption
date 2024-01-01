@@ -24,7 +24,7 @@ def eulers_toilent_calculator(p, q):
 
 def public_e_finder(p, q):
     '''find the publically used 'e' needed for encrypted messages to be sent'''
-    e_to_test = random.randrange(2, 1000000000000000)
+    e_to_test = random.randrange(2, 1000000)
     gcd_of_e_and_euler_toilent = is_gcd_equal_to_one(e_to_test, eulers_toilent_calculator(p ,q))
     if gcd_of_e_and_euler_toilent is True:
         return e_to_test
