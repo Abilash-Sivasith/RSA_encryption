@@ -29,7 +29,7 @@ def public_e_finder(p, q):
     if gcd_of_e_and_euler_toilent is True:
         return e_to_test
     else:
-        public_e_finder(p, q)
+        return public_e_finder(p, q)
 
 def gcd_finder(a, b):
     '''finds the greatest common divisors'''
