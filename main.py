@@ -17,26 +17,10 @@ def prime_checker(number):
     
     return True
 
-# TESTING - prime_checker function
-list_of_nums_to_check = []
-[list_of_nums_to_check.append(i) for i in range(101)]
-list_of_primes_less_than_100 = []
-for num in list_of_nums_to_check:
-    is_prime = prime_checker(num)
-    if is_prime == True:
-        list_of_primes_less_than_100.append(num)
-    is_prime = False
-
-#print(list_of_primes_less_than_100) # should return a list of 25 nums
-#print(len(list_of_primes_less_than_100)) # should return 25
-    
 def eulers_toilent_calculator(p, q):
     '''finds eulers toilent'''
     eulers_tiolnet = (p - 1) * (q - 1)
     return eulers_tiolnet
-
-# TESTING - eulers_toilent_calculator function
-# print(eulers_toilent_calculator(5, 7)) # will print 24
 
 def public_e_finder(a, p, q):
     '''find the publically used 'e' needed for encrypted messages to be sent'''
@@ -46,7 +30,6 @@ def public_e_finder(a, p, q):
         return e_to_test
     else:
         public_e_finder(a, p, q)
-
 
 def gcd_finder(a, b):
     '''finds the greatest common divisors'''
@@ -64,7 +47,6 @@ def is_gcd_equal_to_one(a, b):
     if gcd == 1:
         return True
     return False
-
 
 def private_d_finder():
     '''find the private key 'd' were d = e^-1 mod(phi(n))'''
