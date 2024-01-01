@@ -21,6 +21,9 @@ for num in list_of_nums_to_check:
 # TESTING - gcd_finder function
 #print(main.gcd_finder(14,49)) # will print 7
 
-# TESTING is gcd_eqaul_to_one function 
+# TESTING - is_gcd_eqaul_to_one function 
 #print(main.is_gcd_equal_to_one(7, 15)) # True
 #print(main.is_gcd_equal_to_one(4, 8)) # False
+    
+# TESTING - public_e_finder function
+print(main.public_e_finder(3, 5))

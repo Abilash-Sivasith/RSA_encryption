@@ -22,14 +22,14 @@ def eulers_toilent_calculator(p, q):
     eulers_tiolnet = (p - 1) * (q - 1)
     return eulers_tiolnet
 
-def public_e_finder(a, p, q):
+def public_e_finder(p, q):
     '''find the publically used 'e' needed for encrypted messages to be sent'''
     e_to_test = random.randrange(2, 1000000000000000)
-    gcd_of_e_and_euler_toilent = is_gcd_equal_to_one(a, eulers_toilent_calculator(p ,q))
+    gcd_of_e_and_euler_toilent = is_gcd_equal_to_one(e_to_test, eulers_toilent_calculator(p ,q))
     if gcd_of_e_and_euler_toilent is True:
         return e_to_test
     else:
-        public_e_finder(a, p, q)
+        public_e_finder(p, q)
 
 def gcd_finder(a, b):
     '''finds the greatest common divisors'''
