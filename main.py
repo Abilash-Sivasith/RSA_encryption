@@ -50,6 +50,15 @@ def gcd_finder(a, b):
     else:
         gcd = gcd_finder(b % a , a)
         return gcd
+    
+def is_gcd_equal_to_one(a, p, q):
+    '''return true if gcd == 1'''
+    n = p * q
+    gcd = gcd_finder(a, n)
+    if gcd == 1:
+        return True
+    return False
+
 
 def private_d_finder():
     '''find the private key 'd' were d = e^-1 mod(phi(n))'''
