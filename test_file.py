@@ -1,8 +1,14 @@
 import main
 
 # TESTING - prime_checker function
-list_of_nums_to_check = []
-[list_of_nums_to_check.append(i) for i in range(101)]
+
+def creates_list_from_zero_to_hundred():
+    '''creates a list from 0 to 100'''
+    list_of_nums_to_check = []
+    [list_of_nums_to_check.append(i) for i in range(101)]
+    return list_of_nums_to_check
+
+list_of_nums_to_check = creates_list_from_zero_to_hundred()
 list_of_primes_less_than_100 = []
 for num in list_of_nums_to_check:
     is_prime = main.prime_checker(num)
