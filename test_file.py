@@ -8,16 +8,22 @@ def creates_list_from_zero_to_hundred():
     [list_of_nums_to_check.append(i) for i in range(101)]
     return list_of_nums_to_check
 
-list_of_nums_to_check = creates_list_from_zero_to_hundred()
-list_of_primes_less_than_100 = []
-for num in list_of_nums_to_check:
-    is_prime = main.prime_checker(num)
-    if is_prime == True:
-        list_of_primes_less_than_100.append(num)
-    is_prime = False
+def list_of_primes_less_than_100():
+    '''creates a list of primes less than 100'''
 
-#print(list_of_primes_less_than_100) # should return a list of 25 nums
-#print(len(list_of_primes_less_than_100)) # should return 25
+    list_of_nums_to_check = creates_list_from_zero_to_hundred()
+    list_of_primes_less_than_100 = []
+    for num in list_of_nums_to_check:
+        is_prime = main.prime_checker(num)
+        if is_prime == True:
+            list_of_primes_less_than_100.append(num)
+        is_prime = False
+    
+    return list_of_primes_less_than_100
+
+list_of_primes_less_than_100 = list_of_primes_less_than_100()
+print(list_of_primes_less_than_100) # should return a list
+print(len(list_of_primes_less_than_100)) # should return 25
 
 
 # TESTING - eulers_toilent_calculator function
@@ -32,4 +38,4 @@ for num in list_of_nums_to_check:
 #print(main.is_gcd_equal_to_one(4, 8)) # False
     
 # TESTING - public_e_finder function
-print(main.public_e_finder(3, 5))
+#print(main.public_e_finder(3, 5))
