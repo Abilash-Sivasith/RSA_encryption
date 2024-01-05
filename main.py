@@ -61,17 +61,25 @@ def linear_combination(a, b):
             gcd = gcd_finder(a,b)
             return (x_lots_of_a - (b // a) * x_lots_of_b ), x_lots_of_b
 
-
-def private_d_finder(p, q):
-    '''find the private key 'd' were d = e^-1 mod(phi(n))'''
+def private_d_and_public_e_finder(p, q):
+    '''find the private key 'd' were d = e^-1 mod(phi(n)) and returns both'''
     public_e = public_e_finder(p, q)
     euler_toilent_p_q = eulers_toilent_calculator(p, q)
     private_d, other = linear_combination(public_e,euler_toilent_p_q)
-    return private_d
+    return private_d, public_e
 
-def RSA_encryption(p , q):
+def RSA_encryption(plain_text, p , q):
     '''encrpyts provided plain text and encrpyts text with the RSA system, p and q are choosn primes'''
-    pass
+    private_d, public_e = private_d_and_public_e_finder(p, q)
+    list_of_letters_to_encode = []
+    encoded_string = ''
+    for letter in plain_text.lower():
+        if letter.isalnum():
+            list_of_letters_to_encode.append(letter)
+    for letter in list_of_letters_to_encode:
+        pass
+
+
 
 
 def RSA_decryption():
