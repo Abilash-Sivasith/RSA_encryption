@@ -62,8 +62,6 @@ def linear_combination(a, b):
             return (x_lots_of_a - (b // a) * x_lots_of_b ), x_lots_of_b
 
 
-
-
 def private_d_finder():
     '''find the private key 'd' were d = e^-1 mod(phi(n))'''
     pass
