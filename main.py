@@ -48,6 +48,22 @@ def is_gcd_equal_to_one(a, b):
         return True
     return False
 
+def linear_combination(a, b):
+    """finds the linear combination of a and b given that gcd(a,b) == 1"""
+    gcd_of_a_and_b = is_gcd_equal_to_one(a,b)
+    if gcd_of_a_and_b is True:
+        if a == 0:
+            return 0 , 1
+        elif b == 0 :
+            return 1, 0
+        else:
+            x_lots_of_b, x_lots_of_a = linear_combination(b % a, a)
+            gcd = gcd_finder(a,b)
+            return (x_lots_of_a - (b // a) * x_lots_of_b ), x_lots_of_b
+
+
+
+
 def private_d_finder():
     '''find the private key 'd' were d = e^-1 mod(phi(n))'''
     pass

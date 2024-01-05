@@ -39,3 +39,7 @@ print(len(list_of_primes_less_than_100)) # should return 25
     
 # TESTING - public_e_finder function
 #print(main.public_e_finder(3, 5))
+
+# TESTING - linear_combination function 
+# print(main.linear_combination(7, 5)) # 1 = 7(-2) + 5(3)
+# print(main.linear_combination(13,5)) # 1 = 13(3) + 5(-5)
