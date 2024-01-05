@@ -24,7 +24,7 @@ def eulers_toilent_calculator(p, q):
 
 def public_e_finder(p, q):
     '''find the publically used 'e' needed for encrypted messages to be sent'''
-    e_to_test = random.randrange(1, 100000000)
+    e_to_test = random.randrange(1, 10000000)
     gcd_of_e_and_euler_toilent = is_gcd_equal_to_one(e_to_test, eulers_toilent_calculator(p ,q))
     if gcd_of_e_and_euler_toilent is True:
         return e_to_test
@@ -62,13 +62,17 @@ def linear_combination(a, b):
             return (x_lots_of_a - (b // a) * x_lots_of_b ), x_lots_of_b
 
 
-def private_d_finder():
+def private_d_finder(p, q):
     '''find the private key 'd' were d = e^-1 mod(phi(n))'''
+    public_e = public_e_finder(p, q)
+    euler_toilent_p_q = eulers_toilent_calculator(p, q)
+    private_d, other = linear_combination(public_e,euler_toilent_p_q)
+    return private_d
+
+def RSA_encryption(p , q):
+    '''encrpyts provided plain text and encrpyts text with the RSA system, p and q are choosn primes'''
     pass
 
-def RSA_encryption():
-    '''encrpyts provided plain text and encrpyts text with the RSA system'''
-    pass
 
 def RSA_decryption():
     '''decrypts given cipher text that has been encrypted using the RSA system'''
