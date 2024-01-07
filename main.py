@@ -99,12 +99,15 @@ def RSA_encryption(plain_text, p , q):
     '''encrpyts provided plain text and encrpyts text with the RSA system, p and q are choosn primes'''
     private_d, public_e = private_d_and_public_e_finder(p, q)
     list_of_letters_to_encode = []
-    encoded_string = ''
+    encoded_list = []
     for letter in plain_text.lower():
         if letter.isalnum():
             list_of_letters_to_encode.append(letter)
     for letter in list_of_letters_to_encode:
-        pass
+        letter_as_num = ALPABET_MAPPING[letter]
+        encoded_list.append((letter_as_num ** public_e) % 24)
+    return encoded_list
+
 
 
 def RSA_decryption():
